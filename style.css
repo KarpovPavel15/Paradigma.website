@@ -4,43 +4,67 @@ body {
 
 header {
   background-image: url("./source/backgroundImage.png");
-  padding: 0 2vw 0 2vw; }
+  background-repeat: round; }
 
 .contact-info__location {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  padding: 0 2vw 0 2vw; }
+.contact-info__contacts {
+  padding: 0 2vw 0 2vw;
+  width: max-content; }
+.contact-info__sign-up {
+  padding: 1.0vw 2vw 1.0vw 2vw;
+  display: flex;
+  outline: none;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 4.3vw;
+  background-color: #fefcfb; }
 
 .about-company {
   display: flex;
-  padding-top: 3vw;
+  padding-top: 2vw;
   justify-content: space-between; }
   .about-company__main-info {
-    display: flex; }
+    display: flex;
+    align-items: center; }
   .about-company__contact-info {
     display: flex;
     align-items: center; }
 
 .navigation {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly; }
   .navigation__menu {
+    height: 3vw;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     list-style-type: none;
-    width: max-content;
     align-items: center; }
+  .navigation__shadow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -9;
+    top: 11.5vw; }
   .navigation__item {
-    margin: 0 4vw 0 4px; }
+    margin: 0 2vw 0 2vw;
+    text-align: center; }
 
 .main-info__personality {
-  width: 12vw;
+  width: 10vw;
   text-align: inherit;
   display: flex;
   align-items: center;
-  padding: 0 0 0 4vw; }
+  padding: 0 4vw 0 4vw; }
 
 .contacts__phone, .contacts__time {
   display: flex; }
+.contacts__phone {
+  align-items: flex-end; }
 
 .phone__info {
   display: flex;
@@ -52,10 +76,46 @@ header {
   display: flex;
   align-items: unset;
   justify-content: end; }
+  .phone-area__text {
+    font-size: 1vw; }
+  .phone-area__phone-number {
+    font-size: 1.75vw; }
 
 .time__schedule {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  font-size: 1.2vw; }
+
+.sign-up__text {
+  width: max-content;
+  margin-left: 1vw; }
+
+.location__info {
+  width: max-content; }
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.header__main {
+  padding: 0 7vw 0 7vw; }
+.header__info {
+  display: flex;
+  justify-content: space-between; }
+
+.info__area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 17vw; }
+.info__card {
+  position: absolute;
+  left: 45vw;
+  top: 27vw; }
+.info__text {
+  width: 46vw;
+  font-size: 3vw;
+  margin: 5vw 0 3vw 0; }
 
 /*# sourceMappingURL=style.css.map */

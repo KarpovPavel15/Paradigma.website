@@ -5,23 +5,40 @@ body {
 
 header {
   background-image: url('./source/backgroundImage.png');
-  padding: 0 2vw 0 2vw;
+  background-repeat: round;
 }
 
 .contact-info {
   &__location {
     display: flex;
     align-items: center;
+    padding: 0 2vw 0 2vw;
+  }
+
+  &__contacts {
+    padding: 0 2vw 0 2vw;
+    width: max-content;
+  }
+
+  &__sign-up {
+    padding: 1.0vw 2vw 1.0vw 2vw;
+    display: flex;
+    outline: none;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 4.3vw;
+    background-color: #fefcfb;
   }
 }
 
 .about-company {
   display: flex;
-  padding-top: 3vw;
+  padding-top: 2vw;
   justify-content: space-between;
 
   &__main-info {
     display: flex;
+    align-items: center;
   }
 
   &__contact-info {
@@ -32,40 +49,54 @@ header {
 
 .navigation {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
 
   &__menu {
+    height: 3vw;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     list-style-type: none;
-    width: max-content;
     align-items: center;
   }
 
+  &__shadow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -9;
+    top: 11.5vw;
+  }
+
   &__item {
-    margin: 0 4vw 0 4px;
+    margin: 0 2vw 0 2vw;
     text-align: center;
   }
 }
 
 .main-info {
   &__personality {
-    width: 12vw;
+    width: 10vw;
     text-align: inherit;
     display: flex;
     align-items: center;
-    padding: 0 0 0 4vw;
+    padding: 0 4vw 0 4vw;
   }
 }
 
-.contacts{
-  &__phone, &__time{
+.contacts {
+  &__phone, &__time {
     display: flex;
   }
+
+  &__phone {
+    align-items: flex-end;
+  }
 }
 
-.phone{
-  &__info{
+.phone {
+  &__info {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -73,16 +104,74 @@ header {
   }
 }
 
-.phone-area{
+.phone-area {
   display: flex;
   align-items: unset;
   justify-content: end;
+
+  &__text {
+    font-size: 1vw;
+  }
+
+  &__phone-number {
+    font-size: 1.75vw;
+  }
 }
 
-.time{
-  &__schedule{
+.time {
+  &__schedule {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.2vw;
+  }
+}
+
+.sign-up {
+  &__text {
+    width: max-content;
+    margin-left: 1vw;
+  }
+}
+
+.location {
+  &__info {
+    width: max-content;
+  }
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.header {
+  &__main {
+    padding: 0 7vw 0 7vw;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.info {
+  &__area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 17vw;
+  }
+
+  &__card {
+    position: absolute;
+    left: 45vw;
+    top: 27vw;
+  }
+  &__text{
+    width: 46vw;
+    font-size: 3vw;
+    margin: 5vw 0 3vw 0;
   }
 }
