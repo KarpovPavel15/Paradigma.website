@@ -5,7 +5,7 @@ body {
 
 header {
   background-image: url('./source/backgroundImage.png');
-  padding: 0 10vw 0 10vw;
+  padding: 0 2vw 0 2vw;
 }
 
 .contact-info {
@@ -38,10 +38,13 @@ header {
     display: flex;
     justify-content: center;
     list-style-type: none;
+    width: max-content;
+    align-items: center;
   }
 
   &__item {
     margin: 0 4vw 0 4px;
+    text-align: center;
   }
 }
 
@@ -51,7 +54,7 @@ header {
     text-align: inherit;
     display: flex;
     align-items: center;
-    padding: 0 4vw 0 4vw;
+    padding: 0 0 0 4vw;
   }
 }
 
@@ -66,16 +69,20 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
   }
 }
 
 .phone-area{
   display: flex;
+  align-items: unset;
+  justify-content: end;
 }
 
 .time{
   &__schedule{
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }
