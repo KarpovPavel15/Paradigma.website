@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url('./source/backgroundImage.png');
+  padding: 0 10vw 0 10vw;
+}
+
+.contact-info {
+  &__location {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about-company {
+  display: flex;
+  padding-top: 3vw;
+  justify-content: space-between;
+
+  &__main-info {
+    display: flex;
+  }
+
+  &__contact-info {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin: 0 4vw 0 4px;
+  }
+}
+
+.main-info {
+  &__personality {
+    width: 12vw;
+    text-align: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 4vw 0 4vw;
+  }
+}
+
+.contacts{
+  &__phone, &__time{
+    display: flex;
+  }
+}
+
+.phone{
+  &__info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.phone-area{
+  display: flex;
+}
+
+.time{
+  &__schedule{
+    display: flex;
+    align-items: center;
+  }
+}
