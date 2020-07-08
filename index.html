@@ -19,13 +19,21 @@
             </div>
             <div class="about-company__contact-info contact-info">
                 <div class="contact-info__location location">
-                    <div class="location__map">
+                    <div class="location__map-img">
                         <img src="source/map.png"/>
                     </div>
                     <div class="location__info">
-                        <div>Мы находимся в центре:</div>
+                        <div class="location__text">Мы находимся в центре:</div>
                         <div>г. Брест, ул. Гоголя, д.65</div>
-                        <div>Смотреть на карте</div>
+                        <a class="location__map-text"
+                           onmouseover="showMap()">СМОТРЕТЬ НА КАРТЕ</a>
+                        <div id="map" class="location__map">
+                            <iframe onmouseout="hiddenMap()"
+                                    class="location__map-area"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156899.21672582068!2d23.56280561654026!3d52.08791643548628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210c0223630975%3A0x4d319ea41f64ae99!2z0JHRgNC10YHRgg!5e0!3m2!1sru!2sby!4v1594213316253!5m2!1sru!2sby"
+                                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                                    aria-hidden="false" tabindex="0"></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="contact-info__contacts contacts">
@@ -36,9 +44,9 @@
                                 <div><img src="source/online.png"></div>
                                 <div class="phone-area__text">Звоните, мы сейчас работаем</div>
                             </div>
-                            <div class="phone-area__phone-number">
+                            <a href="tel:+375333822499" class="phone-area__phone-number">
                                 +375 33 382 24 99
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="contacts__time time">
@@ -55,59 +63,79 @@
         <nav class="navigation">
             <ul class="navigation__menu">
                 <li class="navigation__item">
-                    Главная
+                    <span>Главная</span>
                 </li>
                 <li class="navigation__item">
-                    Шугаринг и депиляция воском
+                    <span>Шугаринг и депиляция воском</span>
                 </li>
                 <li class="navigation__item">
-                    Антицеллюлитный массаж
+                    <span>Антицеллюлитный массаж</span>
                 </li>
                 <li class="navigation__item">
-                    Классический массаж
+                    <span>Классический массаж</span>
                 </li>
                 <li class="navigation__item">
-                    Обучение
+                    <span>Обучение</span>
                 </li>
                 <li class="navigation__item">
-                    Косметика для мастеров
+                    <span>Косметика для мастеров</span>
                 </li>
                 <li class="navigation__item">
-                    Статьи
+                    <span>Статьи</span>
                 </li>
                 <li class="navigation__item">
-                    О студии
+                    <span>О студии</span>
                 </li>
                 <li class="navigation__item">
-                    Контакты
+                    <span>Контакты</span>
                 </li>
             </ul>
-            <img class="navigation__shadow" src="./source/shadow.png">
         </nav>
+        <img class="heart heart__right" src="source/heart-right.png"/>
     </div>
     <div class="header__info info">
         <div class="info__area">
-            <div class="info__text">Хотите избавиться от нежелательных волос или нужен сеанс антицеллюлитного массажа?</div>
-            <div>
+            <img class="heart heart__left" src="source/heart-left.png"/>
+            <div class="info__text">
+                <p>Хотите избавиться от <br>
+                    нежелательных волос <br>
+                    или нужен сеанс <br>
+                    антицеллюлитного массажа?</p></div>
+            <div class="info__list">
                 <ul>
-                    <li>депиляция воском и Шугаринг; профессиональные сертифицированные</li>
-                    <li>депиляция воском и Шугаринг; профессиональные сертифицированные</li>
-                    <li>депиляция воском и Шугаринг; профессиональные сертифицированные</li>
-                    <li>депиляция воском и Шугаринг; профессиональные сертифицированные</li>
+                    <li class="info__item"><span>депиляция воском и Шугаринг</span></li>
+                    <li class="info__item"><span>профессиональные сертифицированные мастера</span></li>
+                    <li class="info__item"><span>работаем и с женщинами, и с мужчинами</span></li>
+                    <li class="info__item"><span>результат уже после первой процедуры</span></li>
                 </ul>
-                <button>
-                    <div>text</div>
-                    <div>img</div>
-                </button>
+                <div class="info__button-area">
+                    <button class="info__get-card get-card">
+                        <div class="get-card__text">ПОЛУЧИТЬ КАРТУ <br> КЛИЕНТА БЕСПЛАТНО</div>
+                    </button>
+                    <div class="info__plants">
+                        <img class="info__branch-img" src="source/Branch.png"/>
+                        <img class="info__plant-img" src="source/Plant.png"/>
+                    </div>
+                </div>
             </div>
-            <div class="info__card">
-                <img src="source/card.png"/>
+            <div class="info__card-area">
+                <img class="info__card" src="source/card.png"/>
+                <img class="info__figure" src="source/figure.png"/>
+                <img onmouseover="showHelper()" onmouseleave="hideHelper()" class="info__helper"
+                     src="source/circle.png"/>
+                <div id="helper" class="info__helper-area">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </div>
             </div>
         </div>
-        <div><img src="source/girl.png"/></div>
+        <img class="info__girl" src="source/girl.png"/>
     </div>
+    <div>
+        <img class="header__border" src="source/border.png"/>
+        <img class="header__arrow" src="source/arrow.png">
+    </div>
+
 </header>
-<main>
-</main>
+<script src="./script/index.js"></script>
 </body>
 </html>

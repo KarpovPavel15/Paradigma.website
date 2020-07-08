@@ -6,35 +6,36 @@ body {
 header {
   background-image: url('./source/backgroundImage.png');
   background-repeat: round;
+  height: 55vw;
 }
 
 .contact-info {
   &__location {
     display: flex;
     align-items: center;
-    padding: 0 2vw 0 2vw;
   }
 
   &__contacts {
-    padding: 0 2vw 0 2vw;
-    width: max-content;
+    width: 19vw;
   }
 
   &__sign-up {
     padding: 1.0vw 2vw 1.0vw 2vw;
     display: flex;
+    width: 14vw;
     outline: none;
     cursor: pointer;
     align-items: center;
     border-radius: 4.3vw;
     background-color: #fefcfb;
+    border: none;
   }
 }
 
 .about-company {
   display: flex;
   padding-top: 2vw;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   &__main-info {
     display: flex;
@@ -72,6 +73,18 @@ header {
   &__item {
     margin: 0 2vw 0 2vw;
     text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      span {
+        color: red
+      }
+    ;
+    }
+
+    &:first-child {
+      color: #f7adaf;
+    }
   }
 }
 
@@ -114,7 +127,9 @@ header {
   }
 
   &__phone-number {
+    color: black;
     font-size: 1.75vw;
+    text-decoration: none;
   }
 }
 
@@ -131,12 +146,43 @@ header {
   &__text {
     width: max-content;
     margin-left: 1vw;
+    font-size: 0.8vw;
   }
 }
 
 .location {
   &__info {
     width: max-content;
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+
+  &__map {
+    display: none;
+    position: absolute;
+    left: 40vw;
+    margin-top: 1vw;
+    z-index: 15;
+  }
+
+  &__map-area {
+    height: 17vw;
+    width: 25vw;
+  }
+
+  &__map-text {
+    display: block;
+    margin-top: 0.7vw;
+    text-decoration: none;
+    border-bottom: 1px dashed #fc8495;
+    color: #fc8495;
+    cursor: pointer;
+
+    &:hover {
+      color: #f00000;
+    }
   }
 }
 
@@ -154,24 +200,353 @@ ul {
     display: flex;
     justify-content: space-between;
   }
+
+  &__border {
+    width: 100%;
+    margin-top: 3.8vw;
+    position: absolute;
+  }
+
+  &__arrow {
+    position: relative;
+    margin-top: 2vw;
+    margin-left: 46.77vw;
+    width: 5.5vw;
+  }
 }
 
 .info {
+  &__girl {
+    position: absolute;
+    right: 0;
+    height: 40vw;
+  }
+
+  &__helper {
+    position: absolute;
+    left: 18vw;
+    top: 10vw;
+    width: 5vw;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  &__helper-area {
+    height: 12vw;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 21vw;
+    width: 9vw;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    text-align: center;
+    border-radius: 2vw 2vw 1vw 1vw;
+  }
+
+  &__figure {
+    position: absolute;
+    left: 16.5vw;
+    top: 2vw;
+    width: 7vw;
+  }
+
+  &__plants {
+    display: flex;
+    position: absolute;
+    left: 20vw;
+  }
+
+  &__branch-img {
+    height: 4vw;
+    z-index: 10;
+    position: absolute;
+  }
+
+  &__plant-img {
+    height: 3vw;
+    position: absolute;
+    left: 7vw;
+    z-index: auto;
+  }
+
+  &__button-area {
+    display: flex;
+  }
+
   &__area {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding-left: 17vw;
+    justify-content: end;
+    padding-left: 9vw;
+  }
+
+  &__card-area {
+    position: absolute;
+    left: 34.5vw;
+    top: 33vw;
   }
 
   &__card {
-    position: absolute;
-    left: 45vw;
-    top: 27vw;
+    height: 30vw;
   }
-  &__text{
+
+  &__text {
     width: 46vw;
     font-size: 3vw;
-    margin: 5vw 0 3vw 0;
+    position: relative;
+    z-index: 9;
+  }
+
+  &__list {
+    padding-left: 1vw;
+  }
+
+  &__item {
+    padding: 0.5vw 0 0.5vw 0;
+    font-size: 1vw;
+  }
+
+  &__get-card {
+    padding: 1vw 9vw 1vw 2vw;
+    border-radius: 5vw 5vw 5vw 5vw;
+    margin-top: 1vw;
+    background-color: #f7adaf;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+li {
+  color: #ef9499;
+
+  span {
+    color: #363636;
+  }
+}
+
+.heart {
+  position: absolute;
+
+  &__right {
+    right: 0;
+    top: 5vw;
+    width: 7vw;
+  }
+
+  &__left {
+    left: 1vw;
+    width: 22vw;
+  }
+}
+
+.get-card {
+  &__text {
+    color: white;
+  }
+}
+
+/*Media*/
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1650px) {
+  .navigation {
+    &__item {
+      margin: 0 1vw 0 1vw !important;
+    }
+  }
+  .info {
+    &__branch-img {
+      left: 3vw !important;
+    }
+
+    &__plant-img {
+      left: 10vw !important;
+    }
+  }
+  .heart {
+    &__right {
+      top: 7vw !important;
+    }
+  }
+}
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1199px) {
+  .phone-area {
+    &__text {
+      font-size: 0.9vw !important;
+    }
+  }
+  .heart {
+    &__right {
+      top: 10vw !important;
+    }
+  }
+  .navigation {
+    &__item {
+      margin: 0 0.3vw 0 0.3vw !important;
+    }
+  }
+  .phone-area {
+    &__phone-number {
+      font-size: 1.35vw !important;
+    }
+  }
+  .info {
+    &__branch-img {
+      left: 6vw;
+    }
+
+    &__plant-img {
+      left: 13vw !important;
+    }
+  }
+  .header {
+    &__border {
+      margin-top: 1.5vw !important;
+    }
+
+    &__arrow {
+      margin-left: 47vw !important;
+    }
+  }
+}
+
+@media screen and (min-device-width: 700px) and (max-device-width: 991px) {
+  .main-info {
+    &__personality {
+      width: 0 !important;
+      padding: 0 70px 0 20px !important;
+    }
+  }
+  .heart {
+    &__right {
+      top: 170px !important;
+    }
+  }
+  .phone-area {
+    &__text {
+      font-size: 8px !important;
+      display: flex;
+      align-items: center;
+    }
+
+    &__phone-number {
+      font-size: 14px !important;
+    }
+  }
+  .contacts {
+    &__phone {
+      align-items: center !important;
+    }
+  }
+  .info {
+    &__branch-img {
+      left: 80px;
+    }
+
+    &__plant-img {
+      left: 150px !important;
+    }
+
+    &__card-area {
+      left: 343px !important;
+      top: 403px !important;
+    }
+
+    &__helper-area {
+      font-size: 9px !important;
+    }
+  }
+  .header {
+    &__border {
+      margin-top: 11px !important;
+    }
+  }
+  .navigation {
+    &__item {
+      margin: 0 20px 0 0 !important;
+    }
+  }
+  header {
+    height: auto !important;
+  }
+  .header {
+    &__arrow {
+      margin-top: 0 !important;
+      margin-left: 463px !important;
+    }
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 699px) {
+  .main-info {
+    &__personality {
+      width: 0 !important;
+      padding: 0 70px 0 20px !important;
+    }
+  }
+  .heart {
+    &__right {
+      top: 170px !important;
+    }
+  }
+  .phone-area {
+    &__text {
+      font-size: 8px !important;
+      display: flex;
+      align-items: center;
+    }
+
+    &__phone-number {
+      font-size: 14px !important;
+    }
+  }
+  .contacts {
+    &__phone {
+      align-items: center !important;
+    }
+  }
+  .info {
+    &__branch-img {
+      left: 80px;
+    }
+
+    &__plant-img {
+      left: 150px !important;
+    }
+
+    &__card-area {
+      left: 343px !important;
+      top: 403px !important;
+    }
+
+    &__helper-area {
+      font-size: 9px !important;
+    }
+  }
+  .header {
+    &__border {
+      margin-top: 11px !important;
+    }
+  }
+  .navigation {
+    &__item {
+      margin: 0 20px 0 0 !important;
+    }
+  }
+  header {
+    height: auto !important;
+  }
+  .header {
+    &__arrow {
+      margin-top: 0 !important;
+      margin-left: 463px !important;
+    }
+    &__border{
+      margin-top: -10px !important;
+    }
   }
 }
