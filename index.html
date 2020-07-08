@@ -56,7 +56,7 @@
                 </div>
                 <button class="contact-info__sign-up sign-up">
                     <img src="source/schedule.png">
-                    <div class="sign-up__text">Записаться онлайн</div>
+                    <div class="sign-up__text" onclick="send()">Записаться онлайн</div>
                 </button>
             </div>
         </div>
@@ -109,7 +109,7 @@
                     <li class="info__item"><span>результат уже после первой процедуры</span></li>
                 </ul>
                 <div class="info__button-area">
-                    <button class="info__get-card get-card">
+                    <button class="info__get-card get-card" onclick="send()">
                         <div class="get-card__text">ПОЛУЧИТЬ КАРТУ <br> КЛИЕНТА БЕСПЛАТНО</div>
                     </button>
                     <div class="info__plants">
@@ -134,8 +134,36 @@
         <img class="header__border" src="source/border.png"/>
         <img class="header__arrow" src="source/arrow.png">
     </div>
-
 </header>
+<main>
+    <div id="popup" class="popup">
+        <img class="popup__close" src="source/cancel.png"/>
+        <div class="popup__main">Получите программу обучения</div>
+        <div class="popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d,
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d,
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d,
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d
+        </div>
+        <label class="buttons">
+            <select class="buttons__select">
+                <option value="">Повышение квалификации</option>
+            </select>
+            <input placeholder="Ваше имя" class="buttons__input"/>
+            <input placeholder="Ваш номер телефона" class="buttons__input"/>
+            <button class="buttons__button" onclick="successOperation()">
+                ПОЛУЧИТЬ ПРОГРАММУ
+                <img class="buttons__plant-img" src="source/Plant.png"/>
+            </button>
+        </label>
+        <img class="popup__book-img" src="source/book.png"/>
+    </div>
+    <div class="popup__success" id="popup__success">
+        <img class="popup__cancel-img" src="source/cancel.png">
+        <img src="source/success.png"/>
+        <div>Ваш заказ принят.</div>
+        <div>Ожидайте звонка</div>
+    </div>
+</main>
 <script src="./script/index.js"></script>
 </body>
 </html>

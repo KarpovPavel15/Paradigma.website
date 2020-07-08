@@ -7,6 +7,42 @@ header {
   background-repeat: round;
   height: 55vw; }
 
+.popup {
+  display: none;
+  background-color: #fdf6f3;
+  border-radius: 5vw 5vw 5vw 5vw;
+  flex-direction: column;
+  text-align: center;
+  padding: 7vw;
+  margin: 7vw 30vw 7vw 30vw;
+  align-items: center; }
+  .popup__cancel-img {
+    position: absolute;
+    left: 23vw;
+    top: 122vw; }
+  .popup__success {
+    flex-direction: column;
+    display: none;
+    background: url(./source/background-success.png) no-repeat;
+    width: max-content;
+    align-items: center;
+    padding: 0 6vw 7vw 6vw;
+    text-align: center;
+    font-size: 2vw; }
+  .popup__close {
+    position: absolute;
+    right: 35vw;
+    width: 1.3vw; }
+  .popup__book-img {
+    position: absolute;
+    left: 25vw;
+    top: 81vw;
+    width: 15vw; }
+  .popup__main {
+    font-size: 1.5vw !important; }
+  .popup__text {
+    margin-top: 2vw; }
+
 .contact-info__location {
   display: flex;
   align-items: center; }
@@ -71,6 +107,46 @@ header {
   display: flex; }
 .contacts__phone {
   align-items: flex-end; }
+
+.buttons {
+  margin-top: 4vw;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column; }
+  .buttons__plant-img {
+    position: absolute;
+    width: 12vw; }
+  .buttons__text {
+    width: 30vw; }
+  .buttons__select {
+    border: none;
+    height: 4vw !important;
+    width: 21.6vw !important;
+    text-decoration: none !important;
+    outline: none; }
+  .buttons__button {
+    background-color: #f39fa2;
+    cursor: pointer;
+    border: none;
+    height: 4vw;
+    width: 21.8vw;
+    outline: none;
+    color: white;
+    border-radius: 5vw 5vw 5vw 5vw;
+    padding: 1vw;
+    text-decoration: none !important; }
+  .buttons__text, .buttons__select, .buttons__input {
+    margin-bottom: 3vw;
+    outline: none;
+    height: 2vw;
+    border: none;
+    width: 19.6vw;
+    border-radius: 5vw 5vw 5vw 5vw;
+    padding: 1vw;
+    text-decoration: none !important;
+    position: relative;
+    z-index: 4; }
 
 .phone__info {
   display: flex;
@@ -235,7 +311,7 @@ li {
   color: white; }
 
 /*Media*/
-@media screen and (min-device-width: 1200px) and (max-device-width: 1650px) {
+@media screen and (min-device-width: 1200px) {
   .navigation__item {
     margin: 0 1vw 0 1vw !important; }
 

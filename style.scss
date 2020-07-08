@@ -9,6 +9,55 @@ header {
   height: 55vw;
 }
 
+.popup {
+  display: none;
+  background-color: #fdf6f3;
+  border-radius: 5vw 5vw 5vw 5vw;
+  flex-direction: column;
+  text-align: center;
+  padding: 7vw;
+  margin: 7vw 30vw 7vw 30vw;
+  align-items: center;
+
+  &__cancel-img {
+    position: absolute;
+    left: 23vw;
+    top: 122vw;
+  }
+
+  &__success {
+    flex-direction: column;
+    display: none;
+    background: url(./source/background-success.png) no-repeat;
+    width: max-content;
+    align-items: center;
+    padding: 0 6vw 7vw 6vw;
+    text-align: center;
+    font-size: 2vw
+  }
+
+  &__close {
+    position: absolute;
+    right: 35vw;
+    width: 1.3vw;
+  }
+
+  &__book-img {
+    position: absolute;
+    left: 25vw;
+    top: 81vw;
+    width: 15vw;
+  }
+
+  &__main {
+    font-size: 1.5vw !important;
+  }
+
+  &__text {
+    margin-top: 2vw;
+  }
+}
+
 .contact-info {
   &__location {
     display: flex;
@@ -105,6 +154,57 @@ header {
 
   &__phone {
     align-items: flex-end;
+  }
+}
+
+.buttons {
+  margin-top: 4vw;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+
+  &__plant-img {
+    position: absolute;
+    width: 12vw;
+  }
+
+  &__text {
+    width: 30vw;
+  }
+
+  &__select {
+    border: none;
+    height: 4vw !important;
+    width: 21.6vw !important;
+    text-decoration: none !important;
+    outline: none;
+  }
+
+  &__button {
+    background-color: #f39fa2;
+    cursor: pointer;
+    border: none;
+    height: 4vw;
+    width: 21.8vw;
+    outline: none;
+    color: white;
+    border-radius: 5vw 5vw 5vw 5vw;
+    padding: 1vw;
+    text-decoration: none !important;
+  }
+
+  &__text, &__select, &__input {
+    margin-bottom: 3vw;
+    outline: none;
+    height: 2vw;
+    border: none;
+    width: 19.6vw;
+    border-radius: 5vw 5vw 5vw 5vw;
+    padding: 1vw;
+    text-decoration: none !important;
+    position: relative;
+    z-index: 4;
   }
 }
 
@@ -351,7 +451,7 @@ li {
 
 /*Media*/
 
-@media screen and (min-device-width: 1200px) and (max-device-width: 1650px) {
+@media screen and (min-device-width: 1200px) {
   .navigation {
     &__item {
       margin: 0 1vw 0 1vw !important;
@@ -545,7 +645,8 @@ li {
       margin-top: 0 !important;
       margin-left: 463px !important;
     }
-    &__border{
+
+    &__border {
       margin-top: -10px !important;
     }
   }
